@@ -30,7 +30,6 @@ class Programm
     static int[] SmallerAmount(int[,] array)
     {
         int[] arr = new int[array.GetLength(0)];
-        int sum=0;
         for (int i = 0; i < array.GetLength(0); i++)
         {
             for (int j = 0; j < array.GetLength(1); j++)
@@ -60,7 +59,8 @@ class Programm
         int SmallRow = arr.Min();
 
         WriteArray(arr);
-        
+        int index = Array.IndexOf(arr,SmallRow) + 1;
+        Console.WriteLine($"{index}");
 
         //Console.WriteLine($"Наименьшая сумма элементов в строке+ {arr[SmallRow]}");
 
