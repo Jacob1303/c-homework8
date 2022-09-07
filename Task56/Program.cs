@@ -51,6 +51,5 @@ class Programm
         int SmallRow = arr.Min();
         int index = Array.IndexOf(arr, SmallRow) + 1;
         Console.WriteLine($"Номер строки с наименьшей суммой элементов - {index}");
-
     }
 }
