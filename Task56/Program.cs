@@ -34,18 +34,10 @@ class Programm
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-               arr[i] += array[i,j];
+                arr[i] += array[i, j];
             }
         }
-    return arr;
-    }
-
-    static void WriteArray(int[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.Write(array[i] + " ");
-        }
+        return arr;
     }
 
     static void Main(string[] args)
@@ -57,14 +49,8 @@ class Programm
         Console.WriteLine();
         int[] arr = SmallerAmount(matrix);
         int SmallRow = arr.Min();
+        int index = Array.IndexOf(arr, SmallRow) + 1;
+        Console.WriteLine($"Номер строки с наименьшей суммой элементов - {index}");
 
-        WriteArray(arr);
-        int index = Array.IndexOf(arr,SmallRow) + 1;
-        Console.WriteLine($"{index}");
-
-        //Console.WriteLine($"Наименьшая сумма элементов в строке+ {arr[SmallRow]}");
-
-
-
-    }       
+    }
 }
